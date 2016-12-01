@@ -1,2 +1,2 @@
 # archive100.github.io
-Site Source for http://model100.in
+Model 100 Archive Website Source (http://model100.in)
