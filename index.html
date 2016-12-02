@@ -5,6 +5,7 @@
     <title>Model 100 Archive</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="shortcut icon" href="favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
@@ -13,20 +14,27 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Model 100 Archive</h1>
-      <h2 class="project-tagline">Open Source Archive of TRS-80 Model 100 Software</h2>
-      <a href="https://github.com/archive100/model100archive" class="btn">View on GitHub</a>
+      <h2 class="project-tagline">Public Domain Archive of TRS-80 Model 100 Software</h2>
+      <a href="https://github.com/archive100/model100archive" class="btn"><i class="fa fa-github fa-lg"></i> View on GitHub</a>
+      <a href="https://github.com/archive100/model100archive/pulls" class="btn"><i class="fa fa-plus fa-lg"></i> Add Your Software</a>
     </section>
     <section class="main-content">
-      <p>The Model 100 Archive is an open source (public domain) archive of BASIC software for the TRS-80 Model 100.</p>
-<p>Contact us at <a href="mailto:archive@model100.in">archive@model100.in</a></p>
-<p>Have software you'd like to submit to the archive? Submit a pull request to this repository or email us (<a href="mailto:archive@model100.in">archive@model100.in</a>)</p>
-      <footer class="site-footer">
-        <span class="site-footer-credits">All the software in the Model 100 Archive is in the public domain, and is therefore free for commercial use.</span>
+      <p class="items">
+      </p>
+      <footer class="site-footer site-footer-credits">
+        <p>The Model 100 Archive is an open source (public domain) archive of BASIC software for the TRS-80 Model 100.</p>
+        <p>Contact us at <a href="mailto:archive@model100.in">archive@model100.in</a></p>
+        <p>Want to contribute to the archive? Submit a <a href="https://github.com/archive100/model100archive/pulls">pull request</a> to this repository or email us (<a href="mailto:archive@model100.in">archive@model100.in</a>)</p>
+        All the software in the Model 100 Archive is in the public domain, and free for commercial use.</p>
       </footer>
     </section>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
-      
+      $.getJSON("https://api.github.com/repos/archive100/model100archive/contents/archive", function(data) {
+        $.each(data, function(index, val) {
+          $('.items').append('<a href="' + data[index].download_url + '" target="_blank"><p class="item"><span class="inner"><span class="title">' + data[index].name + '</span> <span class="filesize">' + data[index].size + ' bytes</span></span></p></a>');
+        });
+      });
     </script>
   </body>
 </html>

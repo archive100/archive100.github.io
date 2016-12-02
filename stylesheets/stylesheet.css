@@ -57,7 +57,7 @@ a {
   color: #fff;
   text-align: center;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  background-image: linear-gradient(120deg, #11675a, #11a46b); }
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -243,3 +243,39 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.fa {
+  margin-right: 5px;
+}
+.fa-lg {
+  font-size: 25px!important;
+}
+
+/** ITEMS **/
+
+.item {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  background: #fafafa;
+  display: inline-block;
+  font-weight: bold;
+}
+.filesize {
+  color: #999999;
+  font-weight: 400;
+}
+.item:hover {
+  background: #ffffff;
+  color: #888888;
+  border-color: #ddd;
+}
+.items a {
+  color: inherit;
+}
+.items a:hover {
+  text-decoration: none;
+}
+.inner {
+  padding: 15px;
+  display: inline-block;
+}
