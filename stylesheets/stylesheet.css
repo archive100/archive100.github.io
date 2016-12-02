@@ -256,17 +256,18 @@ a {
 .item {
   border-radius: 5px;
   border: 1px solid #cccccc;
-  background: #fafafa;
+  background: linear-gradient(120deg, #dddddd, #f5f5f5);
   display: inline-block;
   font-weight: bold;
+  margin-right: 10px;
 }
 .filesize {
   color: #999999;
   font-weight: 400;
 }
 .item:hover {
-  background: #ffffff;
-  color: #888888;
+  background: linear-gradient(120deg, #eeeeee, #ffffff);
+  color: #777777;
   border-color: #ddd;
 }
 .items a {
