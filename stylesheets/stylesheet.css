@@ -256,17 +256,37 @@ a {
 .item {
   border-radius: 5px;
   border: 1px solid #cccccc;
-  background: linear-gradient(120deg, #dddddd, #f5f5f5);
+  background: linear-gradient(120deg, #eeeeee, #fafafa);
   display: inline-block;
   font-weight: bold;
-  margin-right: 10px;
+}
+@media screen and (min-width: 800px) {
+  .item {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 31%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 799px){
+  .item {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 48%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .item {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+  }
 }
 .filesize {
   color: #999999;
   font-weight: 400;
 }
 .item:hover {
-  background: linear-gradient(120deg, #eeeeee, #ffffff);
+  background: linear-gradient(120deg, #f4f4f4, #ffffff);
   color: #777777;
   border-color: #ddd;
 }
