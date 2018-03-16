@@ -16,14 +16,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        line-height: 1.6;
       }
       div {
         width: 50vw;
         min-width: 400px;
       }
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.1s linear;
+        border-bottom: 2px solid transparent;
+      }
+      a:hover {
+        border-bottom-color: #111111;
+      }
     </style>
   </head>
   <body>
-    <div>Please contact admin@model100.in to get a Model100.in forwarding email.</div>
+    <div>Please contact <a href="mailto:admin@model100.in">admin@model100.in</a> to get a Model100.in forwarding email.</div>
   </body>
 </html>
